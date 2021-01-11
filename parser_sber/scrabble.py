@@ -1,4 +1,4 @@
-from parser import *
+from pars_logic import *
 
 URL = 'https://www.imdb.com/search/title/'
 HOST = 'https://www.imdb.com'
