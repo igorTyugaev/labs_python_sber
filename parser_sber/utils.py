@@ -180,10 +180,11 @@ def get_params():
 def write_to_csv(film_list):
     try:
         keys = film_list[0].keys()
-        with open('allFilms.csv', 'w', newline='') as output_file:
+        with open('allFilms.csv', 'w', newline='', encoding='utf-8') as output_file:
             dict_writer = csv.DictWriter(output_file, keys)
             dict_writer.writeheader()
             dict_writer.writerows(film_list)
+            logging.info('Total films: ' + str(len(film_list)))
             logging.info('Films list wrote on csv.')
     except:
         return False
